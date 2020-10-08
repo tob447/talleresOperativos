@@ -1,0 +1,33 @@
+<div class="container-fluid" id="app-container">
+
+    <div class="row" id="process-table">
+        <h3>Tabla Procesos con Sus Caracteristicas</h3>
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">PID</th>
+                    <th scope="col">RAM</th>
+                    <th scope="col">CPU</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let process of processlist; index as i">
+                    <th scope="row">{{i}}</th>
+                    <td>{{process.name}}</td>
+                    <td>{{process.pid}}</td>
+                    <td>{{process.memory_percent}}</td>
+                    <td>{{process.cpu_percent}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <br>
+        <br>
+
+          <input [(ngModel)] = 'pid' type="text" class="form-control"  placeholder="Process PID">
+          <button (click)="killProcess()" type="button" class="btn btn-warning">KIll</button>
+    </div>
+</div>

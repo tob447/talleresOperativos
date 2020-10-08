@@ -1,0 +1,21 @@
+#process-table{
+
+    align-content: center;
+    height: 80vh;
+    color: orange;
+}
+#app-container {
+    background-color: black;
+    height: 100vh;
+}
+
+.my-custom-scrollbar {
+    padding-top: 5vh;
+    position: relative;
+    height: 50vh;
+    width: 200vh;
+    overflow: auto;
+    }
+.table-wrapper-scroll-y {
+    display: block;
+    }
