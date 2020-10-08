@@ -17,7 +17,10 @@ export class ApiInteractionService {
   }
 
   killProcess(pid){
-    this.http.post("http://127.0.0.1:5000/",{"pid":pid})
+    this.http.post("http://127.0.0.1:5000/killp",{"pid":pid}).subscribe(
+      data=> console.log(data),
+      err=>console.log(err)
+    )
   }
  
 }

@@ -25,12 +25,13 @@ export class HomeComponent implements OnInit {
         }
       ));
 
-    console.log(this.processlist)
     
   }
 
   killProcess(){
+    console.log(this.pid)
     this.interactionService.killProcess(this.pid)
+  
     
     
   }
